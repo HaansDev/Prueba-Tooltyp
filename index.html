@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Prueba Tooltyp</title>
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row justify-content-between encabezado">
+                <div id="logo" class="col-lg-6 col-md-4 col-5">
+                    <img src="./assets/logo.svg" alt="Logo Tooltyp">
+                </div>
+                <div id="rrss" class="col-lg-6 col-md-4 col-5">
+                    <span class="logo-rrss">
+                        <a href="#" class="link-rrss facebook"><img src="./assets/facebook.svg" alt="facebook"></a>
+                    </span>
+                    <span class="logo-rrss">
+                        <a href="#" class="link-rrss twitter"><img src="./assets/twitter.svg" alt="twitter"></a>
+                    </span>
+                    <span class="logo-rrss">
+                        <a href="#" class="link-rrss instagram"><img src="./assets/instagram.svg" alt="instagram"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="slider-show">
+        <div id="fondo-desktop">
+            <img src="./assets/foto-fondo@2x.png" alt="Fondo Slider" srcset="./assets/foto-fondo@2x.png 2x, ./assets/foto-fondo.png 1x" sizes="(min-width: 900px) 2x, 1x">
+        </div>
+        <div id="fondo-mobile">
+            <img src="./assets/foto-fondo-mobile@2x.png" alt="Fondo Slider" srcset="./assets/foto-fondo-mobile@2x.png 2x, ./assets/foto-fondo-mobile.png 1x" sizes="(max-width: 889px) 2x, 1x">
+        </div>
+
+        <div id="slider-container">
+
+        
+            <div id="carousel-show" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-show" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel-show" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel-show" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1>Muchas gracias por particiar en esta prueba</h1>
+                        <p>Sabemos que te va a llevar cierto tiempo realizarla, pero para nosotros es muy importante y te permite demostrar todas tus
+                            capacidades, al margen de los títulos y formación que puedas tener.
+                        </p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn">Ver más</a>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Muchas gracias por particiar en esta prueba, Cristian Fernández Moreno</h1>
+                        <p>Sabemos que te va a llevar cierto tiempo realizarla, pero para nosotros es muy importante y te permite demostrar todas tus
+                            capacidades, al margen de los títulos y formación que puedas tener.
+                        </p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn">Ver más</a>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Muchas gracias por particiar en esta prueba, Cristian</h1>
+                        <p>Sabemos que te va a llevar cierto tiempo realizarla, pero para nosotros es muy importante y te permite demostrar todas tus
+                            capacidades, al margen de los títulos y formación que puedas tener.
+                        </p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="bloque-destacado" class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h3>INTRODUCCION</h3>
+                <h1>Texto titular de un bloque destacado</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn">Ver más</a>
+            </div>
+        </div>
+    </main>
+
+    <section id="bloque-noticias" class="container-fluid">
+        <div id="noticias-destacadas" class="row justify-content-center">
+            <article class="card noticia col-4">
+                <img class="card-img-top" src="./assets/iStock-1173262510.png" srcset="./assets/iStock-1173262510.png 1x, ./assets/iStock-1173262510@2x.png 2x" alt="Portada noticia">
+                <div class="card-body">
+                    <h3>RETAIL</h3>
+                    <h5 class="card-title">Texto titular de un bloque destacado</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </article>
+
+            <article class="card noticia col-4 custom-glutter">
+                <img class="card-img-top" src="./assets/iStock-1173262510-2.png" srcset="./assets/iStock-1173262510-2.png 1x, ./assets/iStock-1173262510-2@2x.png 2x" alt="Portada noticia">
+                <div class="card-body">
+                    <h3>GASTRONOMIA</h3>
+                    <h5 class="card-title">Texto titular de un bloque destacado</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </article>
+
+            <article class="card noticia col-4">
+                <img class="card-img-top" src="./assets/iStock-1173262510-1.png" srcset="./assets/iStock-1173262510-1.png 1x, ./assets/iStock-1173262510-1@2x.png 2x" alt="Portada noticia">
+                <div class="card-body">
+                    <h3>MILLENIAL</h3>
+                    <h5 class="card-title">Texto titular de un bloque destacado</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div>
+            <h3>NEWSLETTER</h3>
+            <h1>Suscríbete a nuestro boletín</h1>
+
+            <form id="suscripcion">
+                <div class="top-section">
+                    <input type="email" placeholder="Introduce tu e-mail">
+                    <button type="submit">
+                        <img src="./assets/arrow.svg" alt="Enviar">
+                    </button>
+                </div>
+                <div class="bottom-section">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">Has leído y aceptas nuestro Aviso Legal</label>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="dossier">
+        <div class="icono-dossier">
+            <img src="./assets/presentacion.svg" alt="Icono dossier">
+        </div>
+        <a href="#" target="_blank">Descarga nuestro dossier comercial haciendo clic aquí</a>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    <script src="./js/functions.js"></script>
+</body>
+</html>
