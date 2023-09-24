@@ -1,0 +1,3 @@
+# Ignorar archivos que comienzan con "._"
+./._
+assets/._*

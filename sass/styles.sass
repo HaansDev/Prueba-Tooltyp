@@ -7,6 +7,7 @@ $colorNegro: #242424
 $colorTextoF6: #7772F6
 $colorBordesyBtn: #7575EE
 $colorFondoNoticias: #EDEDED
+$colorTextoOverBtb: #380FA1
 
 @mixin fuenteTexto 
     font-family: $Outfit
@@ -41,7 +42,7 @@ $colorFondoNoticias: #EDEDED
     color: $colorNegro
     font-size: 17px
     font-weight: 400
-
+    
 body
     background-color: $colorBlanco
 
@@ -115,6 +116,11 @@ header
                         @include btnEstandar
                         background-color: transparent
                         border-color: $colorBlanco
+                        transition: all 0.3s ease-out
+
+                        &:hover
+                            background-color: $colorBlanco
+                            color: $colorTextoOverBtb
 
 #bloque-destacado
     margin-top: 80px
@@ -140,6 +146,11 @@ header
         background: $colorBlanco
         border-color: $colorBordesyBtn
         margin-bottom: 80px
+        transition: all 0.3s ease-out
+
+        &:hover
+            background-color: $colorBordesyBtn
+            color: $colorBlanco
     
 #bloque-noticias
     background: $colorFondoNoticias
@@ -148,28 +159,33 @@ header
     #noticias-destacadas
         max-width: $anchoCuadricula
         margin: 0 auto
-
-        .custom-glutter
-            margin-left: 32px
-            margin-right: 32px
+        gap: 32px
 
         .noticia
             background: $colorBlanco
+            color: $colorNegro
             height: auto
-            width: 28%
             padding: 0
-            flex: 0 0 auto
-            scroll-snap-align: start
-            
+            transition: transform 0.3s ease-out
+
+            &:hover
+                transform: translateY(-5px)
+
+            a
+                text-decoration: none
+                
             img
                 background-repeat: no-repeat
                 background-size: 100%
 
             .card-body
-                width: 90%
+                width: 100%
+                height: auto
                 text-align: center
                 margin: 0 auto
-                padding: 0 39px 43px 39px
+                margin-top: 39px
+                padding: 0 39px 45px 39px
+                
 
                 h3
                     @include fuenteTexto
@@ -177,12 +193,17 @@ header
                     margin-top: 25px
 
                 .card-title
+                    width: 75%
+                    margin: 0 auto
                     @include fuenteTexto
                     @include encabezadoH1
+                    margin-bottom: 0
 
-                .card-texto
+                .card-text
                     @include fuenteTexto
                     @include textoP
+                    margin-top: 22px
+                    padding: 0 20px 0 20px
 
 #newsletter
     display: flex
@@ -297,6 +318,28 @@ header
         padding-left: 141px
         padding-right: 141px
 
+// Punto de ruptura para slide noticias destacadas
+@media screen and ( max-width: 1024px )
+    #noticias-destacadas
+        display: flex
+        flex-wrap: nowrap
+    
+        .custom-glutter
+            margin-left: 40px !important
+            margin-right: 0 !important
+
+        .noticia 
+            width: 55% !important
+            flex: 0 0 auto !important
+            margin-left: 40px
+
+            .card-body
+                padding: 0 20px 43px 20px !important
+
+            .card-text
+                font-size: 17px
+    
+
 @media screen and (min-width: 429px ) and (max-width: 868px)
     #slider-show
         #slider-container
@@ -314,24 +357,16 @@ header
                             font-size: 35px
 
     #noticias-destacadas
-        display: flex !important
-        overflow-x: scroll !important
-        scroll-snap-type: x mandatory !important
-        flex-wrap: nowrap !important
-        justify-content: flex-start !important
-        margin-left: 37px !important
-        margin-left: 37px !important
-        -ms-overflow-style: none
-        scrollbar-width: none
-    
-        &::-webkit-scrollbar
-            display: none
+        display: flex
+        flex-wrap: nowrap
 
+        .custom-glutter
+            margin-left: 0px !important
 
         .noticia 
-            width: 85% !important
+            width: 65% !important
             flex: 0 0 auto !important
-            scroll-snap-align: start !important
+            margin-left: 0
 
             .card-body
                 padding: 0 20px 43px 20px !important
@@ -371,24 +406,17 @@ header
                             font-size: 35px
 
     #noticias-destacadas
-        display: flex !important
-        overflow-x: scroll !important
-        scroll-snap-type: x mandatory !important
-        flex-wrap: nowrap !important
-        justify-content: flex-start !important
-        margin-left: 37px !important
-        margin-left: 37px !important
-        -ms-overflow-style: none
-        scrollbar-width: none
-    
-        &::-webkit-scrollbar
-            display: none
+        display: flex
+        flex-wrap: nowrap
+        padding-left: 20px !important
 
+        .custom-glutter
+            margin-left: 0px !important    
 
         .noticia 
             width: 85% !important
             flex: 0 0 auto !important
-            scroll-snap-align: start !important
+            margin-left: 0
 
             .card-body
                 padding: 0 20px 43px 20px !important
