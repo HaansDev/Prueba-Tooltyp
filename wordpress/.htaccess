@@ -1,0 +1,27 @@
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+# BEGIN WordPress
+# Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /cf14092023/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /cf14092023/index.php [L]
+</IfModule>
+
+# Proteger wp-admin y wp-login.php con contraseña
+<Files wp-login.php>
+  AuthUserFile . /cf14092023/.htpasswd
+  AuthName "Acceso restringido"
+  AuthType Basic
+  require valid-user
+</Files>
+
+# END WordPress
